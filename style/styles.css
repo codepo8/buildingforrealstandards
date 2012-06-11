@@ -1,0 +1,32 @@
+* { 
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 15px;
+  font-family: "Open Sans", helvetica, arial, sans-serif;
+  padding: 20px;
+}
+footer, section, header, aside, figure {
+  display: block;
+}
+h1 {
+  padding-bottom: 20px;
+}
+form {
+  width: 300px;
+  margin: 10px 0;
+}
+label{
+  width: 60px;
+  font-weight: bold;
+  float: left;
+}
+.formrow {
+  overflow: auto;
+}
+.actionbar {
+  margin-top: 20px;
+  background: #999;
+  text-align: right;
+}

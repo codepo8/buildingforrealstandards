@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form demo</title>
+  <link rel="stylesheet" href="style/styles.css">
+</head>
+<body>
+<header><h1>HTML5 demos</h1></header>
+<section>
+
+  <article>
+    <header><h1>Form demo</h1></header>
+
+    <section>
+      <header><h1>Without validation</h1></header>
+      <form action="foo.php">
+        <div class="formrow">
+          <label for="name">Name: </label>
+          <input type="text" id="name" name="name">
+        </div>
+        <div class="formrow">
+          <label for="age">Age: </label>
+          <input type="number" id="age" name="age">
+        </div>
+        <div class="actionbar">
+          <input type="submit" value="Subscribe">
+        </div>
+      </form>
+    </section>
+
+    <section>
+      <header><h1>With validation</h1></header>
+      <form action="foo.php">
+        <div class="formrow">
+          <label for="name">Name: </label>
+          <input type="text" id="name" required name="name">
+        </div>
+        <div class="formrow">
+          <label for="age">Age: </label>
+          <input type="number" id="age" required 
+                 pattern="[0-9]+" name="age">
+        </div>
+        <div class="actionbar">
+          <input type="submit" value="Subscribe">
+        </div>
+      </form>
+    </section>
+
+  </article>
+  
+</section>
+
+<script>
+</script>
+
+</body>
+</html>

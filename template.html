@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- 
+  ^ tells the browser that this is HTML5 and that it should render in 
+    standards rather than quirks mode 
+-->
+<html lang="en">
+<!-- ^ Defining the language helps screen readers and search engines -->
+<head>
+  <meta charset="UTF-8">
+<!-- 
+  ^ Defining the charset ensures that foreign characters like ç are
+    properly displayed. 
+-->
+  <title>I rock HTML5, believe me</title>
+<!-- ^ A good title helps accessibility, search engines and users -->
+  <style>
+    * { 
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-size: 15px;
+      font-family: "Open Sans", helvetica, arial, sans-serif;
+    }
+    footer, section, header, aside, figure {
+      display: block;
+    }
+  </style>
+<!-- 
+  ^ Just some basic styles to reset browser styling and make HTML5 
+  structural elements display properly. 
+-->
+</head>
+<body>
+  <header>
+    <h1>Man I so rock the HTML5!</h1>
+  </header>
+  <section>
+    <!-- content goes here -->
+  </section>
+  <footer>
+    <!-- credits go here -->
+  </footer>
+<script>
+</script>
+<!-- 
+  ^ adding all your script functionality at the end of the body
+    means you don't need a DOMContentLoaded or window.onload handler.
+    It also means the rendering of the main document is not stalled 
+    by the scripts.
+    Also notice there is no need for a language="JavaScript" any longer.
+-->
+</body>
+</html>

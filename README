@@ -1,0 +1,100 @@
+This is a presentation on web standards and how to use them, specifically 
+how to build predictable, clean and readable code in the HTML5 world 
+without falling for the "shiny new and cool" trap. 
+
+You can find the slides here:
+
+Building for real standards-notes.pdf - Annotated version 
+Building for real standards-notes.pdf - Plain version
+Building for real standards.key.zip - Keynote file (with notes)
+Building for real standards.ppt - Powerpoint file (with notes)
+
+The font uses is Open Sans available from Google - in case Powerpoint 
+doesn't show it properly. 
+
+In the presentation you'll find "demo time" slides followed by "Memo time"
+slides repeating what we just learned. These mean you should show demo code
+in between, which is available here:
+
+HTML5 Basics Demo time:
+
+magic.html - show that this file displays as a heading in the browser. Then 
+             open the browser developer tools and show that the browser 
+             automatically added a html, head and body element, the latter 
+             around the h1 element. Explain that this is what HTML5 browsers 
+             do - they have been built around the robustness principle that 
+             end users should not suffer from developer mistakes and will 
+             inject necessary elements for you. Also explain that this is a 
+             safety precaution to make sure that bad old code on the web will
+             still display in newer browsers and should not be used as an 
+             excuse not to write these elements. Instead we should write code 
+             that is valid and has all the elements to tell the browser what
+             to do _and_ make things easy to understand for the next person 
+             who works with your code. Move on to template.html.
+template.html - this is a very basic template for HTML5 with all the needed 
+                elements and explanations in comments why something is there.
+                Remove the comments when you show the template or use 
+                template-simple.html as your demo to show.
+form.html - this is a simple form example showing that simply by adding a 
+            required attribute you can prevent forms that have errors in them 
+            being sent to the server. Explain that there is very much a need
+            to validate form data on the server (as relying on client-side 
+            validation means attackers could just directly call the script 
+            in the action of your form). Also explain that in HTML5 browsers
+            we don't need to write our own client-side validation as it comes 
+            built-in. The other benefit of this approach is that the 
+            validation rules are defined in the HTML (as seen at the age
+            field) which means they don't get out of sync easily. As a bonus, 
+            also explain that the labels in the form are very much needed 
+            for accessibility.
+video.html - a demo on how easy it is to use video in HTML5. Point out that
+             all you need to do to make a video playable in an HTML5 browser
+             is to add the controls attribute which creates all the player 
+             UI in a keyboard accessible manner. Also point out that the 
+             different formats are needed to support different browsers with 
+             MP4 being for Safari/IE, WebM for Chrome/Firefox and OGV for 
+             older, but still HTML5 compatible browsers. Also point out that 
+             a link around an image as the fallback should video not be 
+             supported is an OK solution and that offering a Flash fallback 
+             could be overkill. You can also show http://vid.ly as a great 
+             example to convert videos in all the necessary formats or 
+             Miro video encoder/MPEG Streamclip as fat client application 
+             alternatives. Another way to convert is to host your videos on 
+             archive.org which will create an MP4 and a WEBM from an OGG 
+             video you upload.
+             
+broken.html - Show this as an example of how to use browser-only functionality
+              and break the web. The file shows a button styled with a 
+              gradient on Firefox. Open the same file in Opera, IE or any 
+              webkit browser and you'll see that it is unusable as it is white
+              text on white background. Show or edit the file live to
+              resemble fixed.html to show the way around that.
+fixed.html - the fixed version of broken.html - show that by adding a simple
+             green background before the gradient one you have a working 
+             fallback for non-Mozilla browsers. Then add all the other 
+             browser prefixes to show how to have the gradient across the 
+             browsers. Point out the annoyance of having to repeat all the 
+             prefixes, but also point out that this allows for tweaking the 
+             settings for different browsers as the results may vary or even 
+             the syntax might be different. Repeat that anything with a 
+             browser prefix is experimental! Mention SASS/LESS/Compass and 
+             other pre-processors as a way to make this easier. 
+             
+Client side thumbnails? Demo time:
+
+Show the demo in the /canvasthumber folder. Simply open the file in the 
+browser and drag some images onto the "Drop images here" square and show 
+that the browser generates thumbnails from them. If you want, explain the 
+code - there is a detailed post on it on Mozilla hacks linked in the footer. 
+It is more important though to point out that this is a great example showing 
+that something that traditionally is only used to output data - HTML5 canvas -
+can be used as an input device and that a hitherto pure server side task like
+image generation (think GD library or imageMagick) can now be done on the client. 
+It's important that in HTML5 we try to use all the things the client can 
+do for us instead of relying on a server all the time as connections are 
+flaky and it is annoying to have to reload a document on a mobile device. 
+
+If you present this somewhere, why not tell me about it? All of this here 
+is licensed with creative commons BY-SA. Go nuts! 
+
+Chris
